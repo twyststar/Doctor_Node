@@ -11,17 +11,20 @@
     <div class="container">
       <div class="well">
         <h1>Find a doctor for what ails you!</h1>
-        <form id='doctorForm'>
-          <label for="search">Symptom:</label>
-          <input type="text" name="search" id="search">
-          <label for="sort">Display by:</label>
-          <select id="sort" form="doctorForm">
-            <option value="distance-asc">Distance</option>
-            <option value="rating-desc">Rating</option>
-            <option value="best-match-asc">Best Match</option>
-          </select>
-          <button type="submit" name="button">Search</button>
-        </form>
+        <div class="form-group">
+          <form id='doctorForm'>
+            <label for="search">Symptom:</label>
+            <input type="text" name="search" id="search">
+            <label for="sort">Display by:</label>
+            <select id="sort" form="doctorForm">
+              <option value="distance-asc">Distance</option>
+              <option value="rating-desc">Rating</option>
+              <option value="best-match-asc">Best Match</option>
+            </select>
+            <button type="submit" name="button">Search</button>
+          </form>
+        </div>
+
       </div>
       <div class="well">
         <div class="error">

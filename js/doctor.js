@@ -26,13 +26,20 @@ Doctor.prototype.getInfo = function(search, sort, displayInfo) {
       $('.error').show()
     } else {
       for (var i =0; i < 10; i++) {
+        if (response.data[i].specialties.length >= 1) {
+          var  specName = response.data[i].specialties[0].name;
+          var specDesc = response.data[i].specialties[0].description;
+        }else {
+          var  specName = 'No specialty info available.';
+          var specDesc = 'No specialty description available.';
+        }
         var image = response.data[i].profile.image_url;
         var lastName = response.data[i].profile.last_name;
         var firstName = response.data[i].profile.first_name;
         var title = response.data[i].profile.title;
         var bio = response.data[i].profile.bio;
 
-        newDoc = new Doctor(lastName, firstName, title, image, bio)
+        newDoc = new Doctor(lastName, firstName, title, image, bio, specName, specDesc)
         doctors.push(newDoc);
       }
       console.log(doctors)
