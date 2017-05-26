@@ -15,7 +15,7 @@ _This site is designed to take user input and recommend a doctor they should see
 * _clone this repository to desktop_
 * _create a file called .env at the top level of the directory_
 * _in .env, type: 'exports.apiKey = "";', placing your api key inside the quotations and save file_
-* _in command line run node install, bower install_
+* _in command line run npm install, bower install_
 * _use enter key to pass any questions without changing anything_
 * _in command line run gulp build_
 * _in command line run gulp serve_
