@@ -9,11 +9,27 @@
   </head>
   <body>
     <div class="container">
-      <div class="well">
+      <div class="header jumbotron">
+        <h1>Star Doctors</h1>
+        <h3>The doctor will be with you shortly.</h3>
+      </div>
+      <div class="well intro">
         <h1>Find a doctor for what ails you!</h1>
         <div class="form-group">
           <form id='doctorForm'>
-            <p>Search is most effective if you enter a speciality (cardiology) or a particular part of the body (heart). Less specific search terms will return either no options or a large interpretation ('pain' will return everything from psychologists to radiologists; 'tooth' will return nothing but 'dentist' will.)</p>
+            <p>Search is most effective if you enter a speciality (cardiology) or a particular part of the body (heart). Less specific search terms will return either no options or a large interpretation ('pain' will return everything from psychologists to radiologists; 'tooth' will return nothing, but 'dentist' will.)</p>
+            <label for="sort">Select your location:</label>
+            <select id="location" form="doctorForm">
+              <option value="47.606%2C-122.332">Seattle</option>
+              <option value="45.523%2C-122.676">Portland, OR</option>
+              <option value="37.774%2C-122.41">San Francisco</option>
+              <option value="40.712%2C-74.005">New York</option>
+              <option value="42.360%2C-71.058">Boston</option>
+              <option value="36.169%2C-115.139">Las Vegas</option>
+              <option value="34.052%2C-118.243">Los Angeles</option>
+              <option value="41.87%2C-87.6298">Chicago</option>
+              <option value="38.907%2C-77.036">Washington DC</option>
+            </select>
             <label for="search">Query:</label>
             <input type="text" name="search" id="search">
             <label for="sort">Display by:</label>
@@ -35,7 +51,6 @@
 
         </ol>
       </div>
-
     </div>
   </body>
 </html>
