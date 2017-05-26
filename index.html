@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather" rel="stylesheet">
     <link rel="stylesheet" href="build/css/vendor.css">
     <link rel="stylesheet" href="build/css/styles.css">
     <script src="build/js/vendor.min.js"></script>
@@ -10,47 +11,73 @@
   <body>
     <div class="container">
       <div class="header jumbotron">
-        <h1>Star Doctors</h1>
-        <h3>The doctor will be with you shortly.</h3>
+        <div class="col-xs-2">
+          <img class="left" src="../img/symbol.png" alt="">
+        </div>
+        <div class="col-xs-8">
+          <h1>Star Doctors</h1>
+          <p>powered by <a href="https://betterdoctor.com/" target="_blank"><img src="../img/betterdoctor.png" alt=""></a></p>
+        </div>
+        <div class="col-xs-2">
+          <img class="right" src="../img/symbol.png" alt="">
+        </div>
       </div>
-      <div class="well intro">
-        <h1>Find a doctor for what ails you!</h1>
-        <div class="form-group">
-          <form id='doctorForm'>
+      <div class="col-xs-10">
+        <div class="intro row well ">
+          <div class="col-xs-6">
+            <h1>Find a doctor for what ails you!</h1>
             <p>Search is most effective if you enter a speciality (cardiology) or a particular part of the body (heart). Less specific search terms will return either no options or a large interpretation ('pain' will return everything from psychologists to radiologists; 'tooth' will return nothing, but 'dentist' will.)</p>
-            <label for="sort">Select your location:</label>
-            <select id="location" form="doctorForm">
-              <option value="47.606%2C-122.332">Seattle</option>
-              <option value="45.523%2C-122.676">Portland, OR</option>
-              <option value="37.774%2C-122.41">San Francisco</option>
-              <option value="40.712%2C-74.005">New York</option>
-              <option value="42.360%2C-71.058">Boston</option>
-              <option value="36.169%2C-115.139">Las Vegas</option>
-              <option value="34.052%2C-118.243">Los Angeles</option>
-              <option value="41.87%2C-87.6298">Chicago</option>
-              <option value="38.907%2C-77.036">Washington DC</option>
-            </select>
-            <label for="search">Query:</label>
-            <input type="text" name="search" id="search">
-            <label for="sort">Display by:</label>
-            <select id="sort" form="doctorForm">
-              <option value="distance-asc">Distance</option>
-              <option value="rating-desc">Rating</option>
-              <option value="best-match-asc">Best Match</option>
-            </select>
-            <button type="submit" name="button">Search</button>
-          </form>
-        </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="form-group">
+              <form id='doctorForm'>
 
-      </div>
-      <div class="well">
-        <div class="error">
-          <h3>Sorry, no doctors matched your search. Try a different keyword or location.</h3>
+                <br>
+                <label for="sort">Select your location:</label>
+                <select id="location" form="doctorForm">
+                  <option value="47.606%2C-122.332">Seattle</option>
+                  <option value="45.523%2C-122.676">Portland, OR</option>
+                  <option value="37.774%2C-122.41">San Francisco</option>
+                  <option value="40.712%2C-74.005">New York</option>
+                  <option value="42.360%2C-71.058">Boston</option>
+                  <option value="36.169%2C-115.139">Las Vegas</option>
+                  <option value="34.052%2C-118.243">Los Angeles</option>
+                  <option value="41.87%2C-87.6298">Chicago</option>
+                  <option value="38.907%2C-77.036">Washington DC</option>
+                </select>
+                <br><br>
+                <label for="search">Query:</label>
+                <input type="text" name="search" id="search">
+                <br><br>
+                <label for="sort">Display by:</label>
+                <select id="sort" form="doctorForm">
+                  <option value="distance-asc">Distance</option>
+                  <option value="rating-desc">Rating</option>
+                  <option value="best-match-asc">Best Match</option>
+                </select>
+                <br>
+                <button type="submit" class="btn" name="button">Search</button>
+              </form>
+            </div>
+          </div>
         </div>
-        <ol class="return">
+        <div class="well result">
+          <h3>Click on a doctor's name to Google them</h3><br>
+          <div class="error">
+            <h3>Sorry, no doctors matched your search. Try a different keyword or location.</h3>
+          </div>
+          <ol class="well return list-unstyled">
+            <h4>The doctor will be with you shortly.</h4>
+          </ol>
+        </div>
+      </div>
+      <div class="col-xs-2 well" id="sidebar">
+        <h4>Recent Doctors:</h4>
+        <ol id="doctorList">
 
         </ol>
       </div>
+
     </div>
   </body>
 </html>
