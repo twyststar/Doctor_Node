@@ -18,9 +18,9 @@ function Doctor(lastName, firstName, title, image, bio, specialtyName, specialty
 // 47.606%2C-122.332 = user location format
 var latLong = '47.606%2C-122.332%2C'
 var userLoc = '47.606%2C-122.332'
-Doctor.prototype.getInfo = function(search, displayInfo) {
+Doctor.prototype.getInfo = function(search, sort, displayInfo) {
   doctors = [];
-  $.get('https://api.betterdoctor.com/2016-03-01/doctors?query='+ search + '&location='+ latLong +'100&user_location='+ userLoc + '&sort=distance-asc&skip=0&limit=10&user_key=' + apiKey).then(function(response){
+  $.get('https://api.betterdoctor.com/2016-03-01/doctors?query='+ search + '&location='+ latLong +'100&user_location='+ userLoc + '&sort='+ sort + '&skip=0&limit=10&user_key=' + apiKey).then(function(response){
     console.log(response)
     if (response.data.length === 0) {
       $('.error').show()
