@@ -52,14 +52,6 @@ gulp.task("build", ['clean'], function(){
   gulp.start('cssBuild');
 });
 
-gulp.task("build", function(){
-  if (buildProduction) {
-    gulp.start('minifyScripts');
-  } else {
-    gulp.start('jsBrowserify');
-  }
-});
-
 gulp.task('cssBuild', function() {
   return gulp.src(['scss/*.scss'])
     .pipe(sourcemaps.init())
