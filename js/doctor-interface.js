@@ -15,15 +15,14 @@ $(document).ready(function(){
   $('#doctorForm').submit(function(){
     event.preventDefault();
     var search = $('#search').val();
+      if(search == 'grout' || search == 'Grout' ){
+        $('.return').append('<h2><a href="http://www.groutdoctor.com/"target="_blank">You need the Grout Doctor!</a></h2>');
+      }else{
     $('#search').val('');
     var sort = $('#sort').val()
     var userLoc = $('#location').val()
     var latLong = (userLoc + '%2c')
-    docSearch.getInfo(userLoc, latLong, search, sort, displayInfo);
-
-    $('.info').click(function(){
-      $(this).next('contact').slideToggle();
-    });
+    docSearch.getInfo(userLoc, latLong, search, sort, displayInfo);}
   });
 
 });
