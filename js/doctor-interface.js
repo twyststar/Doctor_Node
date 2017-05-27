@@ -16,6 +16,7 @@ $(document).ready(function(){
     event.preventDefault();
     var search = $('#search').val();
       if(search == 'grout' || search == 'Grout' ){
+        $('.return').text('');
         $('.return').append('<h2><a href="http://www.groutdoctor.com/"target="_blank">You need the Grout Doctor!</a></h2>');
       }else{
     $('#search').val('');
